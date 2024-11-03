@@ -20,6 +20,7 @@ function App() {
 
   return (
     <>
+    <h2>rhis is product details </h2>
     
     <GoogleOAuthProvider clientId="987724367142-g2tamta3enipb68rhm3kq6vqjc5o0s24.apps.googleusercontent.com">
        <GoogleLoginComponent/>
