@@ -11,6 +11,8 @@ import './App.css';
 import { useSelector } from 'react-redux';
 import GoogleLoginComponent from './GoogleLoginComponent';
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import FacebookLoginComponent from './FacebookLoginComponent';
+import NotFound from './NotFound';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -18,9 +20,14 @@ function App() {
 
   return (
     <>
+    
     <GoogleOAuthProvider clientId="987724367142-g2tamta3enipb68rhm3kq6vqjc5o0s24.apps.googleusercontent.com">
        <GoogleLoginComponent/>
        </GoogleOAuthProvider>
+       <FacebookLoginComponent/>
+
+       
+      
       
 
       <BrowserRouter>
@@ -42,6 +49,8 @@ function App() {
           <Route path='/contactus' element={<ContactUs />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/purchasehistory' element={<PurchaseHistory />} />
+
+          <Route path='*' element={<NotFound/>}/>
         </Routes>
       </BrowserRouter>
      
